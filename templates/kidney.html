@@ -1,0 +1,108 @@
+
+<html>
+  <head>
+  <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Kidney Disease Test</title>
+      <style>
+        
+          .btn-danger{
+      border-radius: 0;
+      padding: 10px 20px;
+            color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    }
+          </style>
+    
+  </head>
+
+    <body style="background-color:#282828;">
+  <!-- Java Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+    <!-- Navbar-->
+    <nav class="navbar navbar-white bg-white">
+      <span class="navbar-brand mb-0 h1">Kidney Disease Test</span>
+      </nav>
+    <div class="container">
+      <br>
+      <!--Form-->
+      <form  action = "{{url_for('predict')}}" method ="POST" >
+        <fieldset>
+        <legend><p style ="color :#d6c6b2;">Kidney Disease Test Form</p></legend><br>
+          <div class="card card-body" >
+            <div class="form-group  row">
+            <div class="col-sm-6">
+              <label for="bp">Blood Pressure</label>
+              <input class="form-control" type="number" id="bp" name="Year" required="required" placeholder="Blood Pressure">
+            </div>
+            <div class="col-sm-6">
+                         <label for="sg">Specific Gravity</label>
+                           <input class="form-control" type="number" step="any" id="sg" name="sg" required="required" placeholder="Specific Gravity">
+            </div>
+            <div class="col-sm-6">
+                          <label for="al">Albumin</label>
+                            <input class="form-control" type="number" id="al" name="al" required="required" placeholder="Albumin">
+            </div>
+            <div class="col-sm-6">
+              <label for="su">Blood Sugar Level</label>
+                            <input class="form-control" type="number" id="su" name="su" required="required" placeholder="Blood Sugar Level">
+            </div>
+            <div class="col-sm-6">
+               <label for="rbc">Red Blood Cells Count</label>
+                <select class="form-control" type="number" id="rbc" name="rbc" required="required" placeholder="Red Blood Cells Count">
+                  <option>--select--</option>
+                  <option value="0">abnormal</option>
+                  <option value="1">normal</option>
+                </select>
+             
+            </div>
+            <div class="col-sm-6">
+              <label for="pc">Pus Cell Count</label>
+                <select class="form-control" type="number" id="pc" name="pc" required="required" placeholder="Pus Cell Count">
+                  <option>--select--</option>
+                  <option value="0">notpresent</option>
+                  <option value="1">present</option>
+                </select>
+             
+            </div>
+            <div class="col-sm-6">
+              <label for="pcc">Pus Cell Clumps</label>
+                <select class="form-control" type="number" id="pcc" name="pcc" required="required" placeholder="Pus Cell Clumps">
+                  <option>--select--</option>
+                  <option value="0">notpresent</option>
+                  <option value="1">present</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+            
+              </div>
+
+            <div class="form-grou">
+              <br>
+              <button type="submit" class="btn btn-danger" >Predict </button>
+            </div>
+
+
+            <br>
+           <br>
+           <br>
+
+            <!--Prediction Result-->
+
+                       </div>
+
+                 </fieldset>
+                </form>
+
+              </div>
+
+            </body>
+           </html>
